@@ -1,0 +1,11 @@
+version: "3"
+services:
+  server:
+    image: node:20
+    volumes:
+      - ./:/home/node/app
+    working_dir: /home/node/app
+    user: "node"
+    command: ["sh", "-c", "yarn install && node index.js"]
+    ports:
+      - "8100:8100"

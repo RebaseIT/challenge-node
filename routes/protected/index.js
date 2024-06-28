@@ -66,7 +66,7 @@ router.delete('/users/:id', (req, res) => {
     }
 })
 router.post('/products', (req, res) => {
-    const product = req.product
+    const product = req.body.product
     if(!product){
         return res.json({status: 400, errorMsg: 'Product field missing.'}).status(400)
     }
