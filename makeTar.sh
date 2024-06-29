@@ -1,6 +1,7 @@
 #!/bin/bash
 FILE_NAME="products-challenge-node.tar.gz"
 tar \
+--exclude=".git" \
 --exclude="node_modules" \
 --exclude="makeTar.sh" \
 --exclude="$FILE_NAME" \
